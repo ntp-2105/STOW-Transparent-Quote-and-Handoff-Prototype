@@ -1,0 +1,602 @@
+<body class="font-[var(--font-noto-sans)]">
+    <div hidden=""><!--$--><!--/$--></div>
+    <script>((a, b, c, d, e, f, g, h) => { let i = document.documentElement, j = ["light", "dark"]; function k(b) { var c; (Array.isArray(a) ? a : [a]).forEach(a => { let c = "class" === a, d = c && f ? e.map(a => f[a] || a) : e; c ? (i.classList.remove(...d), i.classList.add(f && f[b] ? f[b] : b)) : i.setAttribute(a, b) }), c = b, h && j.includes(c) && (i.style.colorScheme = c) } if (d) k(d); else try { let a = localStorage.getItem(b) || c, d = g && "system" === a ? window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light" : a; k(d) } catch (a) { } })("class", "theme", "light", null, ["light", "dark"], null, true, true)</script>
+    <style>
+        #nprogress {
+            pointer-events: none
+        }
+
+        #nprogress .bar {
+            background: var(--primary);
+            position: fixed;
+            z-index: 1600;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px
+        }
+
+        #nprogress .peg {
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 100px;
+            height: 100%;
+            box-shadow: 0 0 10px var(--primary), 0 0 5px var(--primary-dark);
+            opacity: 1;
+            -webkit-transform: rotate(3deg) translate(0px, -4px);
+            -ms-transform: rotate(3deg) translate(0px, -4px);
+            transform: rotate(3deg) translate(0px, -4px)
+        }
+
+        #nprogress .spinner {
+            display: block;
+            position: fixed;
+            z-index: 1600;
+            top: 15px;
+            right: 15px
+        }
+
+        #nprogress .spinner-icon {
+            width: 18px;
+            height: 18px;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            border-top-color: var(--primary);
+            border-left-color: var(--primary);
+            border-radius: 50%;
+            -webkit-animation: nprogress-spinner 400ms linear infinite;
+            animation: nprogress-spinner 400ms linear infinite
+        }
+
+        .nprogress-custom-parent {
+            overflow: hidden;
+            position: relative
+        }
+
+        .nprogress-custom-parent #nprogress .bar,
+        .nprogress-custom-parent #nprogress .spinner {
+            position: absolute
+        }
+
+        @-webkit-keyframes nprogress-spinner {
+            0% {
+                -webkit-transform: rotate(0deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @keyframes nprogress-spinner {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+    <main class="relative transition-opacity duration-300 opacity-100">
+        <div class="__variable_40aa16 h-dvh w-full overflow-hidden bg-white text-slate-900">
+            <div class="relative flex h-full w-full flex-col bg-slate-50/60">
+                <header
+                    class="flex items-center justify-between border-b border-slate-100 bg-white/90 px-3 py-2 backdrop-blur">
+                    <button
+                        class="flex h-10 w-10 items-center justify-center rounded-full text-slate-600 transition hover:bg-slate-100"
+                        aria-label="Mở menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-[18px] w-[18px]">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg></button>
+                    <div class="flex items-center"><img src="/STOW_Blue%20logo.svg" alt="STOW" class="h-6 w-auto"></div>
+                    <div class="flex h-10 items-center justify-end">
+                        <div class="">
+                            <div class="relative w-fit"><button type="button"
+                                    class="relative flex h-9 w-10 cursor-default items-center justify-center rounded-md border border-gray-200 bg-white py-1 text-left text-xs shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed disabled:bg-gray-10 disabled:opacity-70"
+                                    aria-haspopup="listbox" aria-expanded="false"><span
+                                        class="flex w-full items-center justify-center"><img alt="Cờ Tiếng Việt"
+                                            loading="lazy" width="22" height="16" decoding="async" data-nimg="1"
+                                            class="h-auto w-[20px] flex-shrink-0 rounded-[2px]"
+                                            style="color:transparent" src="/country_flags/vn.svg"></span></button></div>
+                        </div>
+                    </div>
+                </header>
+                <div class="flex-1 overflow-y-auto">
+                    <div class="mx-auto w-full max-w-[720px] space-y-5 px-4 py-6">
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">Hi, I'm moving to Ho Chi Minh City soon
+                                        and need to store some household belongings for about 3 months. I have around
+                                        10–12 medium-sized boxes, a small desk, and a few suitcases. Could you help me
+                                        figure out how much storage space I would need, the estimated price, and what I
+                                        need to do to book it?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Với số lượng đồ gồm 10–12 thùng vừa, 1 bàn nhỏ và vài vali, anh/chị sẽ cần
+                                            không gian khoảng <strong>2 – 3 m³ (CBM)</strong>.</p>
+                                        <p>Bảng giá tham khảo cho thời hạn <strong>3 tháng</strong> (đã áp dụng ưu đãi
+                                            giảm 5%, chưa bao gồm 8% VAT, phí vận chuyển/đóng gói tính riêng nếu có):
+                                        </p>
+                                        <ul>
+                                            <li><strong>Kho tự quản (Self-Storage)</strong> <em>(ra vào tự do 24/7 tại
+                                                    An Phú / 375 Võ Nguyên Giáp)</em>:
+                                                <ul>
+                                                    <li><strong>2 m³</strong>: <strong>1.129.000 VNĐ/tháng</strong></li>
+                                                    <li><strong>3 m³</strong>: <strong>1.347.000 VNĐ/tháng</strong></li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Kho trọn gói (Valet Storage)</strong> <em>(tiết kiệm hơn ~40%,
+                                                    bên em hỗ trợ lấy và giao đồ tận nơi khi cần, không cần trực tiếp
+                                                    đến kho)</em>:
+                                                <ul>
+                                                    <li><strong>2 m³</strong>: <strong>797.000 VNĐ/tháng</strong></li>
+                                                    <li><strong>3 m³</strong>: <strong>957.000 VNĐ/tháng</strong></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p><strong>Để đặt kho</strong>, quy trình rất đơn giản: anh/chị chỉ cần chốt gói
+                                            dịch vụ mong muốn, thời gian bắt đầu lưu trữ và thông tin liên hệ, em sẽ lên
+                                            phiếu báo giá và hỗ trợ giữ chỗ ngay.</p>
+                                        <p>Anh/chị đang nghiêng về hình thức <strong>tự quản 24/7</strong> hay
+                                            <strong>dịch vụ trọn gói giao nhận tận nơi</strong> ạ?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">Số lượng 2–3 m³ mà bạn ước tính được
+                                        tính như thế nào? Bạn có thể giải thích cụ thể khoảng bao nhiêu diện tích/thể
+                                        tích cho 10–12 thùng đồ, 1 bàn nhỏ và vài chiếc vali không?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Cách tính thể tích ước tính <strong>2 – 3 m³</strong> dựa trên kích thước đồ
+                                            đạc tiêu chuẩn như sau ạ:</p>
+                                        <ul>
+                                            <li><strong>10–12 thùng carton cỡ vừa</strong>: mỗi thùng khoảng 0,08 – 0,1
+                                                m³ → tổng khoảng <strong>0,8 – 1,2 m³</strong>.</li>
+                                            <li><strong>1 bàn làm việc nhỏ</strong>: thể tích chiếm chỗ khoảng
+                                                <strong>0,5 – 0,8 m³</strong> (do dạng khối bàn chiếm khoảng không gian
+                                                bên dưới/trên mặt bàn).</li>
+                                            <li><strong>2–3 chiếc vali</strong>: mỗi vali khoảng 0,12 – 0,18 m³ → tổng
+                                                khoảng <strong>0,3 – 0,5 m³</strong>.</li>
+                                        </ul>
+                                        <p><strong>Quy đổi diện tích sàn thực tế:</strong></p>
+                                        <ul>
+                                            <li>Tổng thể tích thực tế khoảng <strong>1,6 – 2,5 m³</strong> cộng thêm
+                                                khoảng 15–20% độ hở xếp dỡ, vừa vặn trong kho <strong>2 – 3 m³</strong>.
+                                            </li>
+                                            <li>Với chiều cao kho giả định là <strong>2 m</strong>, không gian <strong>2
+                                                    – 3 m³</strong> sẽ tương đương diện tích sàn khoảng <strong>1 – 1,5
+                                                    m²</strong> (khoảng 1m × 1m đến 1m × 1,5m). Bạn có thể xếp các thùng
+                                                chồng lên nhau 2–3 tầng và để vali, bàn bên cạnh rất gọn gàng.</li>
+                                        </ul>
+                                        <p>Chiếc bàn nhỏ của bạn có thể tháo rời chân khi vận chuyển không, hay để
+                                            nguyên khối ạ?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">Không thể</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Dạ nếu bàn làm việc không thể tháo rời chân, bàn sẽ được tính là đồ nguyên
+                                            khối (cần thêm khoảng đệm thể tích vì khó xếp chồng đồ nặng lên trên).</p>
+                                        <p>Vì vậy, lựa chọn <strong>kho 3 m³</strong> sẽ là phương án an toàn và thoải
+                                            mái nhất để vừa vặn toàn bộ đồ đạc mà không lo bị chật hay cấn móp thùng:
+                                        </p>
+                                        <ul>
+                                            <li><strong>Kho tự quản (Self-Storage) 3 m³</strong>: <strong>1.347.000
+                                                    VNĐ/tháng</strong> <em>(chưa VAT, có sẵn tại chi nhánh An Phú hoặc
+                                                    375 Võ Nguyên Giáp, ra vào tự do 24/7)</em>.</li>
+                                            <li><strong>Kho trọn gói (Valet Storage) 3 m³</strong>: <strong>957.000
+                                                    VNĐ/tháng</strong> <em>(tiết kiệm hơn ~40%, bên em nhận và giao hàng
+                                                    tận nơi)</em>.</li>
+                                        </ul>
+                                        <p>Anh/chị dự kiến sẽ chuyển đồ vào khoảng ngày nào, và địa chỉ nơi ở mới của
+                                            mình ở khu vực quận nào để em tư vấn phương án thuận tiện nhất ạ?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">Nếu tôi chọn kho 3 m³ trong 3 tháng thì
+                                        tổng số tiền tôi thực tế cần thanh toán là bao nhiêu, đã bao gồm 8% VAT? Ngoài
+                                        ra còn khoản phí bắt buộc nào khác mà tôi cần chuẩn bị không?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Dạ chi tiết tổng chi phí cho kho <strong>3 m³ trong 3 tháng</strong> (đã bao
+                                            gồm 8% VAT và ưu đãi 5%) cùng các khoản cần chuẩn bị như sau ạ:</p>
+                                        <h3>1. Kho tự quản (Self-Storage) – Ra vào 24/7</h3>
+                                        <ul>
+                                            <li><strong>Tiền thuê kho 3 tháng</strong>: <strong>4.365.000 VNĐ</strong>
+                                                <em>(1.455.000 VNĐ/tháng × 3 tháng, đã gồm VAT)</em>.</li>
+                                            <li><strong>Tiền đặt cọc (Bắt buộc)</strong>: <strong>1.347.000 VNĐ</strong>
+                                                <em>(tương đương 1 tháng tiền thuê trước VAT, khoản này sẽ được hoàn lại
+                                                    100% khi anh/chị trả kho)</em>.</li>
+                                            <li><strong>Ổ khóa cửa kho</strong>: Anh/chị tự chuẩn bị ổ khóa riêng của
+                                                mình (hoặc có thể mua trực tiếp tại kho nếu chưa có).</li>
+                                            <li><em>Lưu ý</em>: Kho tự quản mặc định khách tự vận chuyển (nếu anh/chị
+                                                cần xe MyStorage đến lấy đồ sẽ có phí vận chuyển riêng).</li>
+                                        </ul>
+                                        <hr>
+                                        <h3>2. Kho trọn gói (Valet Storage) – Giao nhận tận nơi</h3>
+                                        <ul>
+                                            <li><strong>Tiền thuê kho 3 tháng</strong>: <strong>3.102.000 VNĐ</strong>
+                                                <em>(1.034.000 VNĐ/tháng × 3 tháng, đã gồm VAT)</em>.</li>
+                                            <li><strong>Tiền đặt cọc</strong>: <strong>Không cần đặt cọc</strong>.</li>
+                                            <li><strong>Phí dịch vụ phát sinh</strong>: Phí lấy đồ và trả đồ tận nơi của
+                                                đội xe (tính theo khoảng cách thực tế từ địa chỉ của anh/chị).</li>
+                                        </ul>
+                                        <p>Anh/chị muốn nhận báo giá chính thức cho <strong>kho tự quản</strong> hay
+                                            <strong>kho trọn gói</strong> ạ? Em có thể tạo phiếu báo giá chi tiết gửi
+                                            anh/chị ngay nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">Tôi muốn chọn gói kho trọn gói 3 m³
+                                        trong 3 tháng. Nếu muốn tiến hành đặt kho thì tôi cần cung cấp những thông tin
+                                        gì?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Dạ để tiến hành đặt <strong>kho trọn gói (Valet Storage) 3 m³</strong>,
+                                            anh/chị chỉ cần cung cấp các thông tin sau ạ:</p>
+                                        <ol>
+                                            <li><strong>Thông tin liên hệ</strong>: Họ và tên, số điện thoại và email
+                                                (để bên em tạo hồ sơ và gửi xác nhận đơn đặt kho).</li>
+                                            <li><strong>Địa chỉ lấy đồ</strong>: Địa chỉ cụ thể tại TP.HCM (kèm lưu ý
+                                                như nhà mặt tiền/hẻm nhỏ, lầu mấy, có thang máy hay thang bộ).</li>
+                                            <li><strong>Thời gian mong muốn</strong>: Ngày và khung giờ anh/chị muốn đội
+                                                ngũ MyStorage qua lấy đồ.</li>
+                                            <li><strong>Chi tiết đồ đạc</strong>: Xác nhận số lượng thùng, vali và kích
+                                                thước sơ bộ của chiếc bàn làm việc (để bên em chuẩn bị xe và nhân sự bốc
+                                                xếp phù hợp).</li>
+                                        </ol>
+                                        <p>Anh/chị có thể gửi trước cho em <strong>họ tên, số điện thoại/email</strong>
+                                            và <strong>địa chỉ lấy đồ</strong> để em hỗ trợ lên lịch ngay nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">Nếu tôi cung cấp đầy đủ các thông tin
+                                        trên thì bạn có thể tạo báo giá và đặt lịch lấy đồ trực tiếp cho tôi ngay trong
+                                        cuộc trò chuyện này không? Sau khi tôi cung cấp thông tin, quy trình tiếp theo
+                                        sẽ diễn ra như thế nào?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Dạ hoàn toàn <strong>được</strong> ạ! Ngay khi anh/chị gửi thông tin, em có
+                                            thể:</p>
+                                        <ol>
+                                            <li><strong>Tạo phiếu báo giá chính thức</strong>: Gửi link báo giá chi tiết
+                                                trực tiếp trong chat để anh/chị xem lại quyền lợi và thanh toán trực
+                                                tuyến thuận tiện.</li>
+                                            <li><strong>Tính phí vận chuyển &amp; tạo yêu cầu lấy đồ</strong>: Tính toán
+                                                khoảng cách từ địa chỉ của anh/chị và ghi nhận lịch hẹn lấy hàng lên hệ
+                                                thống điều phối của MyStorage.</li>
+                                        </ol>
+                                        <hr>
+                                        <h3>Quy trình tiếp theo sau khi gửi thông tin:</h3>
+                                        <ul>
+                                            <li><strong>Bước 1 — Xác nhận lịch lấy đồ</strong>: Đội ngũ CSKH/vận hành sẽ
+                                                kiểm tra lịch xe và liên hệ với anh/chị trong thời gian sớm nhất để chốt
+                                                chính xác khung giờ đội xe đến lấy đồ.</li>
+                                            <li><strong>Bước 2 — Thanh toán &amp; Hợp đồng</strong>: Anh/chị xác nhận
+                                                thông tin đơn hàng và thanh toán trực tuyến nhanh chóng qua link (chuyển
+                                                khoản, thẻ hoặc QR).</li>
+                                            <li><strong>Bước 3 — Lấy hàng &amp; Nhập kho</strong>: Đúng hẹn, nhân sự
+                                                MyStorage sẽ đến tận nơi hỗ trợ kiểm đếm, bốc xếp đồ lên xe, niêm phong
+                                                cẩn thận và chuyển về kho lưu trữ an toàn tại Nhơn Trạch, Đồng Nai. Khi
+                                                cần nhận lại đồ, anh/chị chỉ cần báo trước 2 ngày là bên em giao tận
+                                                nhà.</li>
+                                        </ul>
+                                        <p>Anh/chị có thể gửi cho em <strong>họ tên, số điện thoại, email</strong> cùng
+                                            <strong>địa chỉ và ngày giờ dự kiến</strong> để em tiến hành ngay nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">Vậy với trường hợp của tôi, phí lấy đồ
+                                        và phí giao đồ sau này có được tính vào báo giá 3.102.000 VNĐ không? Nếu chưa,
+                                        bạn có thể cho tôi biết cách tính và ước tính các khoản phí này trước khi tôi
+                                        cung cấp thông tin cá nhân không?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Dạ số tiền <strong>3.102.000 VNĐ</strong> là chi phí thuê kho lưu trữ trong 3
+                                            tháng (đã gồm 8% VAT), <strong>chưa bao gồm</strong> phí lấy đồ và phí giao
+                                            đồ sau này ạ. Đây là các dịch vụ vận chuyển riêng biệt.</p>
+                                        <p>Chi tiết về cách tính các khoản phí này như sau:</p>
+                                        <h3>1. Phí lấy đồ ban đầu (Pickup)</h3>
+                                        <ul>
+                                            <li><strong>Cách tính tiêu chuẩn</strong>: <strong>20.000 VNĐ/km</strong>
+                                                (khoảng cách di chuyển từ 375 Võ Nguyên Giáp, TP. Thủ Đức đến địa chỉ
+                                                của anh/chị) + <strong>195.000 VNĐ/m³</strong> phí bốc xếp (sàn tối
+                                                thiểu 350.000 VNĐ/chuyến).</li>
+                                            <li>Với khối lượng <strong>3 m³</strong> của anh/chị, phần phí bốc dỡ là
+                                                <strong>585.000 VNĐ</strong> (+ phí khoảng cách km thực tế).</li>
+                                            <li><em>Lưu ý</em>: Mức giá tiêu chuẩn áp dụng cho chung cư có thang máy/nhà
+                                                trệt, chưa bao gồm các phụ phí bọc lót đồ gỗ chuyên dụng, khiêng vác
+                                                thang bộ nhiều lầu hoặc bốc dỡ ngoài giờ hành chính nếu có.</li>
+                                            <li>Do cần đo khoảng cách chính xác trên bản đồ, hệ thống cần biết địa chỉ
+                                                cụ thể mới có thể báo con số chính xác nhất cho anh/chị.</li>
+                                        </ul>
+                                        <hr>
+                                        <h3>2. Phí giao trả đồ sau này (Delivery)</h3>
+                                        <ul>
+                                            <li>Khoản phí này <strong>không thu trước</strong>.</li>
+                                            <li>Sau này khi hết hạn thuê hoặc khi anh/chị cần nhận lại đồ, anh/chị chỉ
+                                                cần cung cấp thời gian, địa chỉ nhận và ghi chú thực tế. Đội ngũ vận
+                                                hành sẽ kiểm tra lịch xe, lộ trình và gửi báo giá chính xác cho anh/chị
+                                                xác nhận trước khi tiến hành giao hàng.</li>
+                                        </ul>
+                                        <p>Anh/chị có thể chia sẻ trước <strong>địa chỉ hoặc khu vực lấy đồ</strong>
+                                            (tên đường, phường, quận) để em tính toán cự ly và gửi mức phí lấy đồ chính
+                                            xác cho mình tham khảo trước nhé?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">đường Quang Trung, phường Thông Tây Hội
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Dạ khu vực <strong>đường Quang Trung</strong> (Gò Vấp) nằm trong phạm vi phục
+                                            vụ lấy hàng tận nơi của MyStorage.</p>
+                                        <p>Với thể tích <strong>3 m³</strong>, chi phí bốc dỡ tiêu chuẩn là
+                                            <strong>585.000 VNĐ</strong> (195.000 VNĐ/m³), cộng thêm cước di chuyển thực
+                                            tế là <strong>20.000 VNĐ/km</strong> tính từ chi nhánh 375 Võ Nguyên Giáp
+                                            (TP. Thủ Đức).</p>
+                                        <p>Để bên em đo chính xác số km và báo mức phí vận chuyển trọn gói (không ước
+                                            tính phỏng đoán), anh/chị cho em xin <strong>số nhà cụ thể</strong> (hoặc số
+                                            hẻm) trên đường Quang Trung, kèm <strong>họ tên và số điện
+                                                thoại/email</strong> để em gửi bảng báo giá đầy đủ nhé ạ!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-end">
+                                <div
+                                    class="rounded-2xl rounded-br-md bg-[#0275BC] px-4 py-2.5 text-[15px] leading-[1.4] text-white shadow-sm">
+                                    <div class="whitespace-pre-wrap break-words">Số nhà cụ thể: 1258 Quang Trung,
+                                        Họ tên: Nguyễn Phúc
+                                        Số điện thoại: 0854102215
+                                        Email: phucnt2105@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="flex max-w-[90%] flex-col gap-1.5 items-start">
+                                <div class="w-full text-[15px] leading-[1.55] text-slate-800">
+                                    <div class="prose prose-sm max-w-none break-words dark:prose-invert ">
+                                        <p>Dạ em đã ghi nhận đầy đủ thông tin của anh Phúc:</p>
+                                        <ul>
+                                            <li><strong>Họ tên</strong>: Nguyễn Phúc</li>
+                                            <li><strong>Số điện thoại</strong>: 0854102215</li>
+                                            <li><strong>Email</strong>: <a href="mailto:phucnt2105@gmail.com"
+                                                    node="[object Object]" target="_blank"
+                                                    rel="noopener noreferrer">phucnt2105@gmail.com</a></li>
+                                            <li><strong>Địa chỉ lấy đồ</strong>: 1258 Quang Trung, Phường Thông Tây Hội,
+                                                Gò Vấp</li>
+                                            <li><strong>Gói dịch vụ</strong>: Kho trọn gói (Valet Storage) <strong>3
+                                                    m³</strong> trong <strong>3 tháng</strong></li>
+                                            <li><strong>Đồ đạc lưu trữ</strong>: 10–12 thùng đồ, 1 bàn làm việc nhỏ
+                                                nguyên khối và 2–3 vali</li>
+                                        </ul>
+                                        <p>Đội ngũ kinh doanh của MyStorage đã nhận được thông tin và sẽ đo khoảng cách
+                                            chính xác từ chi nhánh 375 Võ Nguyên Giáp để gửi bảng báo giá chi tiết (bao
+                                            gồm tiền thuê kho và cước phí lấy đồ) qua Zalo/email cho anh trong thời gian
+                                            sớm nhất ạ.</p>
+                                        <p>Anh Phúc dự kiến muốn bên em qua lấy đồ vào <strong>ngày nào</strong> và
+                                            trong <strong>khung giờ nào</strong> để đội xe tiện sắp xếp lịch trước cho
+                                            anh nhé?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="border-t border-slate-100 bg-white px-3 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+                    <div class="mx-auto w-full max-w-[720px]">
+                        <div
+                            class="flex flex-col gap-1.5 rounded-3xl border border-slate-200 bg-white px-3 py-2.5 shadow-[0_4px_20px_-8px_rgba(2,117,188,0.18)] transition focus-within:border-[#0275BC] focus-within:shadow-[0_4px_24px_-6px_rgba(2,117,188,0.28)]">
+                            <textarea placeholder="Hỏi về kho, kích thước, hoặc giá thuê…"
+                                class="w-full resize-none bg-transparent px-1 py-1.5 text-[15px] leading-[1.4] text-slate-900 placeholder:text-slate-400 focus:outline-none disabled:opacity-50"
+                                style="height: 33px !important;"></textarea>
+                            <div class="flex items-center justify-end gap-1.5">
+                                <div class="relative flex items-center"><input type="file" multiple="" accept="image/*"
+                                        class="hidden"><button type="button" aria-haspopup="true" aria-expanded="false"
+                                        aria-label="Mở menu STOW" title="Mở menu STOW"
+                                        class="flex h-9 w-9 items-center justify-center rounded-full text-[#0275BC] transition hover:bg-[#0275BC]/10 disabled:opacity-40"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-plus h-[18px] w-[18px]">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg></button></div>
+                                <div class="flex h-9 items-center"><button type="button"
+                                        class="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition text-[#0275BC] hover:bg-[#0275BC]/10 disabled:opacity-60"
+                                        style="transition:box-shadow 90ms ease-out" aria-label="Đọc để nhập"
+                                        title="Đọc để nhập văn bản"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-mic h-[15px] w-[15px]">
+                                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                            <line x1="12" x2="12" y1="19" y2="22"></line>
+                                        </svg></button>
+                                    <div
+                                        class="flex items-center gap-1.5 overflow-hidden transition-all duration-200 ease-in-out max-w-[260px] scale-100 opacity-100">
+                                        <button type="button"
+                                            class="flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-[12px] font-semibold transition disabled:opacity-40 text-[#0275BC] hover:bg-[#0275BC]/10 "
+                                            style="transition:box-shadow 100ms ease-out"
+                                            aria-label="Bắt đầu trò chuyện thoại" title="Trò chuyện với STOW"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-audio-lines h-[15px] w-[15px]">
+                                                <path d="M2 10v3"></path>
+                                                <path d="M6 6v11"></path>
+                                                <path d="M10 3v18"></path>
+                                                <path d="M14 8v7"></path>
+                                                <path d="M18 5v13"></path>
+                                                <path d="M22 10v3"></path>
+                                            </svg><span>Nói trực tiếp</span></button></div><button type="button"
+                                        disabled=""
+                                        class="flex h-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#0275BC] text-white shadow-sm transition-all duration-200 ease-in-out hover:bg-[#036399] disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none pointer-events-none ml-0 w-0 scale-75 opacity-0"
+                                        aria-label="Gửi"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-send h-4 w-4">
+                                            <path
+                                                d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                                            </path>
+                                            <path d="m21.854 2.147-10.94 10.939"></path>
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-1.5 text-center text-[11px] text-slate-400">STOW có thể nhầm. Anh/chị kiểm tra
+                            giá trước khi đặt nhé.</div>
+                    </div>
+                </div>
+                <div class="fixed inset-0 z-40 bg-slate-900/40 backdrop-blur-sm transition-opacity duration-200 pointer-events-none opacity-0"
+                    aria-hidden="true"></div>
+                <aside
+                    class="fixed inset-y-0 left-0 z-50 flex w-[320px] max-w-[85vw] flex-col bg-white shadow-2xl transition-transform duration-200 ease-out -translate-x-full"
+                    aria-label="Menu điều hướng">
+                    <div class="flex items-center justify-between border-b border-slate-100 px-5 py-4">
+                        <div class="flex items-center"><img src="/STOW_Blue%20logo.svg" alt="STOW" class="h-7 w-auto">
+                        </div><button
+                            class="flex h-8 w-8 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100"
+                            aria-label="Đóng menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4">
+                                <path d="M18 6 6 18"></path>
+                                <path d="m6 6 12 12"></path>
+                            </svg></button>
+                    </div><button
+                        class="mx-5 mt-5 flex items-center justify-center gap-2 rounded-full bg-[#0275BC] py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#036399]"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-plus h-4 w-4">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg> <!-- -->Cuộc trò chuyện mới</button>
+                    <div class="mt-6 flex-1 overflow-y-auto px-2 pb-6">
+                        <div class="px-3 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">Gần đây
+                        </div>
+                        <ul class="mt-2 space-y-0.5">
+                            <li><a class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100"
+                                    href="/chat/38813b91-4643-4b27-9539-65f0748fd791"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-clock h-3.5 w-3.5 shrink-0 text-slate-400">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg><span class="flex-1 truncate">Hi, I'm moving to Ho Chi Minh City soon and need
+                                        t</span><span class="text-[11px] text-slate-400">6 giờ trước</span></a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div><!--$--><!--/$-->
+        </div>
+    </main>
+    <script>requestAnimationFrame(function () { $RT = performance.now() });</script>
+    <script src="/_next/static/chunks/webpack-d679b80bca1bed9a.js?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m" id="_R_"
+        async=""></script>
+    <title>MyStorage Personal Assistant</title>
+    <meta name="description" content="An AI-powered personal assistant to help you make your storage easier.">
+    <meta name="robots" content="index, follow">
+    <script>document.querySelectorAll('body link[rel="icon"], body link[rel="apple-touch-icon"]').forEach(el => document.head.appendChild(el))</script>
+    <script>$RB = []; $RV = function (a) { $RT = performance.now(); for (var b = 0; b < a.length; b += 2) { var c = a[b], e = a[b + 1]; null !== e.parentNode && e.parentNode.removeChild(e); var f = c.parentNode; if (f) { var g = c.previousSibling, h = 0; do { if (c && 8 === c.nodeType) { var d = c.data; if ("/$" === d || "/&" === d) if (0 === h) break; else h--; else "$" !== d && "$?" !== d && "$~" !== d && "$!" !== d && "&" !== d || h++ } d = c.nextSibling; f.removeChild(c); c = d } while (c); for (; e.firstChild;)f.insertBefore(e.firstChild, c); g.data = "$"; g._reactRetry && requestAnimationFrame(g._reactRetry) } } a.length = 0 };
+        $RC = function (a, b) { if (b = document.getElementById(b)) (a = document.getElementById(a)) ? (a.previousSibling.data = "$~", $RB.push(a, b), 2 === $RB.length && ("number" !== typeof $RT ? requestAnimationFrame($RV.bind(null, $RB)) : (a = performance.now(), setTimeout($RV.bind(null, $RB), 2300 > a && 2E3 < a ? 2300 - a : $RT + 300 - a)))) : b.parentNode.removeChild(b) }; $RC("B:1", "S:1")</script>
+    <script>$RC("B:0", "S:0")</script>
+    <script>(self.__next_f = self.__next_f || []).push([0])</script>
+    <script>self.__next_f.push([1, "1:\"$Sreact.fragment\"\n2:I[27321,[\"7177\",\"static/chunks/app/layout-bbe03bc58c9fdcf0.js?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\"],\"ThemeProvider\"]\n3:I[30634,[\"7177\",\"static/chunks/app/layout-bbe03bc58c9fdcf0.js?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\"],\"I18nProvider\"]\na:I[57150,[],\"\"]\nb:I[21887,[\"7177\",\"static/chunks/app/layout-bbe03bc58c9fdcf0.js?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\"],\"\"]\nc:I[79949,[\"7177\",\"static/chunks/app/layout-bbe03bc58c9fdcf0.js?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\"],\"default\"]\nd:I[9766,[],\"\"]\ne:I[98924,[],\"\"]\nf:I[33486,[\"4345\",\"static/chunks/app/not-found-40808468059e6259.js?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\"],\"default\"]\n10:I[17989,[],\"ClientSegmentRoot\"]\n11:I[60477,[\"6538\",\"static/chunks/app/chat/layout-0b205475a79163c1.js?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\"],\"default\"]\n12:I[60154,[\"6205\",\"static/chunks/app/chat/%5B%5B...id%5D%5D/page-ce8ce52611c49239.js?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\"],\"default\"]\n13:I[24431,[],\"OutletBoundary\"]\n15:I[15278,[],\"AsyncMetadataOutlet\"]\n17:I[24431,[],\"ViewportBoundary\"]\n19:I[24431,[],\"MetadataBoundary\"]\n1a:\"$Sreact.suspense\"\n1c:I[80622,[],\"IconMark\"]\n:HL[\"/_next/static/media/1755441e3a2fa970-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/1d8a05b60287ae6c-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/dc1a31dd116e0329-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/3c1a127821734965.css?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\",\"style\"]\n:HL[\"/_next/static/css/40f52578c11c6f2a.css?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\",\"style\"]\n"])</script>
+    <script>self.__next_f.push([1, "0:{\"P\":null,\"b\":\"5f19rZOt9tyE1lFBK-PVd\",\"p\":\"\",\"c\":[\"\",\"chat\",\"38813b91-4643-4b27-9539-65f0748fd791\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"chat\",{\"children\":[[\"id\",\"38813b91-4643-4b27-9539-65f0748fd791\",\"oc\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/3c1a127821734965.css?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/40f52578c11c6f2a.css?dpl=dpl_3JDVbLkdBTKwtyevcfWJKoTS7D1m\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"vi\",\"className\":\"__variable_e76be9 scrollbar scrollbar-track-background scrollbar-thumb-background-secondary scroll-smooth\",\"suppressHydrationWarning\":true,\"children\":[\"$\",\"body\",null,{\"suppressHydrationWarning\":true,\"className\":\"font-[var(--font-noto-sans)]\",\"children\":[\"$\",\"$L2\",null,{\"attribute\":\"class\",\"defaultTheme\":\"light\",\"enableSystem\":true,\"disableTransitionOnChange\":true,\"children\":[\"$\",\"$L3\",null,{\"initialLocale\":\"vi\",\"initialMessages\":{\"HistoryPanel\":{\"NewChat\":\"Trò chuyện mới\",\"Loading\":\"Đang tải lịch sử...\",\"UntitledChat\":\"Cuộc trò chuyện chưa có tên\",\"DeleteConfirmation\":\"Bạn có chắc chắn muốn xóa vĩnh viễn cuộc trò chuyện này không? Hành động này không thể hoàn tác.\",\"DeleteSuccess\":\"Đã xóa cuộc trò chuyện thành công.\",\"DeleteError\":\"Xóa cuộc trò chuyện thất bại. Vui lòng thử lại.\",\"DeleteModalTitle\":\"Xóa cuộc trò chuyện\",\"DeleteButton\":\"Xóa\",\"CancelButton\":\"Hủy\",\"NoHistory\":\"Chưa có lịch sử\",\"ErrorTitle\":\"Lỗi tải\",\"Retry\":\"Thử lại\",\"LimitWarning\":\"Chỉ lưu 10 cuộc trò chuyện gần nhất.\",\"ConversationCount\":\"{count}/10 cuộc trò chuyện\",\"CBMUnit\":\"m³\"},\"Chat\":{\"ViewOrDownloadFile\":\"Xem hoặc tải xuống {fileName}\",\"Close\":\"Đóng\",\"FileType\":\"Loại\",\"FileSize\":\"Kích thước\",\"OpenFile\":\"Mở\",\"PreviewNotAvailable\":\"Không thể xem trước\",\"ShowMoreFiles\":\"Xem thêm (+{count})\",\"ShowLessFiles\":\"Thu gọn\"},\"CitationDisplay\":{\"Title\":\"Nguồn tham khảo ({count})\",\"Open\":\"Mở\",\"Restricted\":\"Hạn chế\",\"AccessRestricted\":\"Quyền truy cập bị giới hạn bởi quản trị viên\"},\"ItemManagementSummary\":{\"Title\":\"Cập nhật danh sách đồ vật\",\"SummaryAdded\":\"Đã thêm {count} mục\",\"SummaryUpdated\":\"Đã cập nhật {count} mục\",\"SummaryRemoved\":\"Đã xóa {count} mục\",\"Added\":\"Đã thêm\",\"Updated\":\"Đã cập nhật\",\"Removed\":\"Đã xóa\",\"Action\":\"Hành động\",\"ChangeName\":\"Tên: \\\"{from}\\\" → \\\"{to}\\\"\",\"ChangeQuantity\":\"Số lượng: {from} → {to}\",\"ChangeDimension\":\"{dim}: {from}mm → {to}mm\"},\"TrayNavigator\":{\"ItemsLabel\":\"Đồ vật\",\"HistoryLabel\":\"Uớc tính\"},\"ItemManager\":{\"ItemRemoveSuccess\":\"Đã xóa thành công đồ vật '{itemName}'\",\"ItemRemoveError\":\"Không tìm thấy đồ vật nào có tên '{itemName}' để xóa\",\"EditErrorNoUpdates\":\"Không có thông tin cập nhật nào được cung cấp\",\"ItemEditSuccess\":\"Đã chỉnh sửa thành công đồ vật '{itemName}'\",\"ItemEditError\":\"Không tìm thấy đồ vật nào có tên '{itemName}' để chỉnh sửa\",\"ToolAddSuccess\":\"Đã thêm: {itemName}\",\"ToolUpdateSuccess\":\"Đã cập nhật: {itemName}\",\"ToolUpdateError\":\"Lỗi: Không tìm thấy {itemName} để cập nhật\",\"ToolRemoveSuccess\":\"Đã xóa: {itemName}\",\"ToolRemoveError\":\"Lỗi: Không tìm thấy {itemName} để xóa\",\"FinalizeErrorEmptyList\":\"Danh sách đồ vật trống. Vui lòng thêm đồ vật trước khi ước tính.\",\"PythonApiError\":\"Lỗi API Python: {error}\",\"TooManyItems\":\"Danh sách đồ vật quá dài ({current} đồ vật). Vui lòng giảm xuống còn {max} đồ vật hoặc ít hơn trước khi hoàn tất.\",\"ApiTimeoutError\":\"Yêu cầu đến dịch vụ đề xuất đã hết thời gian chờ. Vui lòng thử lại.\"},\"InitializingSession\":\"Đang khởi tạo phiên trò chuyện của bạn...\",\"ChatSessionError\":\"Không thể bắt đầu phiên trò chuyện. Vui lòng thử lại sau.\",\"ErrorTitles\":{\"liveConnectionFailed\":\"Kết nối chế độ Camera thất bại\",\"conversationError\":\"Lỗi cuộc trò chuyện\"},\"ErrorMessages\":{\"SERVER_TOKEN_FETCH_FAILED\":\"Không thể lấy được token phiên hợp lệ từ máy chủ. Vui lòng thử lại sau.\",\"SERVER_NETWORK_ERROR\":\"Đã xảy ra lỗi mạng. Vui lòng kiểm tra kết nối internet của bạn.\",\"SERVER_UNKNOWN_ERROR\":\"Đã xảy ra lỗi máy chủ không mong muốn. Đội ngũ của chúng tôi đã được thông báo.\",\"EXTERNAL_API_GEMINI_RESOURCE_EXHAUSTED\":\"Hạn mức dịch vụ AI tạm thời đã hết. Vui lòng thử lại sau.\",\"CLIENT_INVALID_RESPONSE_FORMAT\":\"Đã nhận được phản hồi không hợp lệ từ máy chủ. Vui lòng thử lại.\",\"I18N_LANGUAGE_FILE_LOAD_FAILED\":\"Không tải được tài nguyên ngôn ngữ. Ứng dụng có thể không hiển thị chính xác.\",\"LIVE_API_CONNECTION_FAILED\":\"Không thể thiết lập kết nối với chế độ Camera. Vui lòng kiểm tra mạng của bạn và thử lại.\",\"LIVE_API_WEBSOCKET_ERROR\":\"Kết nối chế độ Camera bị gián đoạn bất ngờ. Hệ thống sẽ cố gắng kết nối lại.\",\"LIVE_API_AUDIO_CONTEXT_INIT_FAILED\":\"Không thể truy cập thiết bị âm thanh của bạn. Vui lòng đảm bảo trình duyệt của bạn có quyền sử dụng microphone.\",\"LIVE_API_INVALID_CONFIG\":\"Ứng dụng chưa được cấu hình chính xác cho phiên chế độ Camera.\",\"CONVERSATION_LOAD_FAILED\":\"Chúng tôi không thể tải cuộc trò chuyện của bạn. Vui lòng thử làm mới trang hoặc bắt đầu một cuộc trò chuyện mới.\",\"CONVERSATION_INVALID_DATA_FORMAT\":\"Dữ liệu cuộc trò chuyện dường như bị hỏng. Vui lòng bắt đầu một cuộc trò chuyện mới.\",\"CONVERSATION_SESSION_FAILED\":\"Không thể thiết lập phiên bảo mật. Vui lòng kiểm tra kết nối của bạn và thử lại.\",\"CONVERSATION_SAVE_FAILED\":\"Đã xảy ra sự cố khi lưu cuộc trò chuyện của bạn. Những thay đổi mới nhất của bạn có thể không được bảo toàn.\",\"CONVERSATION_ASSET_UPLOAD_FAILED\":\"Không thể tải lên tài sản hình ảnh. Tệp sẽ được lưu trữ cục bộ tạm thời.\",\"CONVERSATION_CONFIG_FETCH_FAILED\":\"Không thể tải cấu hình ứng dụng. Một số tính năng có thể không hoạt động như mong đợi.\",\"ITEM_MANAGER_ITEM_NOT_FOUND\":\"Đã cố gắng thực hiện thao tác trên một mục không còn tồn tại. Hành động này đã bị bỏ qua.\",\"ITEM_MANAGER_RECOMMENDATION_API_FAILED\":\"Dịch vụ đề xuất lưu trữ hiện không khả dụng. Vui lòng thử lại sau.\",\"ITEM_MANAGER_RECOMMENDATION_API_TIMEOUT\":\"Yêu cầu đề xuất lưu trữ đã hết thời gian chờ. Vui lòng kiểm tra kết nối của bạn hoặc thử lại.\",\"ITEM_MANAGER_TOO_MANY_ITEMS_FOR_RECOMMENDATION\":\"Số lượng mục vượt quá mức tối đa cho phép để tính toán.\",\"UI_KNOWLEDGE_BASE_FETCH_FAILED\":\"Không thể tải tài liệu được yêu cầu. Vui lòng thử lại sau.\",\"UI_VIDEO_CAPTURE_FAILED\":\"Không thể chụp khung hình video. Vui lòng đảm bảo camera của bạn đang hoạt động và thử lại.\",\"CLIENT_CONFIG_MISSING_API_KEY\":\"Ứng dụng chưa được cấu hình chính xác để hiển thị nội dung này. Thiếu một khóa API bắt buộc.\",\"HISTORY_LOAD_FAILED\":\"Không thể tải lịch sử trò chuyện của bạn. Vui lòng kiểm tra kết nối của bạn và thử lại.\",\"HISTORY_DELETE_FAILED\":\"Không thể xóa cuộc trò chuyện. Vui lòng thử lại.\",\"INDEXED_DB_OPERATION_FAILED\":\"Đã xảy ra lỗi lưu trữ cục bộ. Vui lòng thử xóa bộ nhớ cache của trình duyệt nếu sự cố vẫn tiếp diễn.\",\"PERMISSION_QUERY_FAILED\":\"Không thể kiểm tra quyền truy cập camera hoặc microphone. Vui lòng đảm bảo bạn chưa chặn quyền cho trang web này.\",\"CORE_CHAT_AI_SDK_ERROR\":\"Đã xảy ra lỗi giao tiếp với dịch vụ AI. Vui lòng thử lại yêu cầu của bạn.\",\"CORE_CHAT_TOOL_CALL_FAILED\":\"Trợ lý AI không thực hiện được hành động bắt buộc. Vui lòng thử lại.\",\"FILE_HANDLING_UPLOAD_FAILED\":\"Tải lên thất bại cho {fileName}: {error}\",\"FILE_HANDLING_PREVIEW_GENERATION_FAILED\":\"Không thể tạo bản xem trước cho tệp đã chọn.\",\"MEDIA_DEVICE_PERMISSION_DENIED\":\"Quyền truy cập camera đã bị từ chối. Để sử dụng tính năng này, vui lòng cấp quyền camera trong cài đặt trình duyệt của bạn.\",\"MEDIA_DEVICE_NO_DEVICES_FOUND\":\"Không tìm thấy thiết bị camera nào trên hệ thống của bạn. Vui lòng đảm bảo webcam đã được kết nối và bật.\",\"MEDIA_DEVICE_STREAM_START_FAILED\":\"Không thể bắt đầu luồng camera. Thiết bị có thể đang được ứng dụng khác sử dụng hoặc đã xảy ra lỗi phần cứng.\"},\"Actions\":{\"retry\":\"Retry\",\"dismiss\":\"Dismiss\",\"goHome\":\"Go to Home\"},\"RecommendationHistory\":{\"Beta\":\"Thử nghiệm\",\"Title\":\"Lịch sử ước tính\",\"ClearAll\":\"Xóa tất cả\",\"NoPlanSoFar\":\"Chưa có kế hoạch\",\"NoPlanDescription\":\"Kế hoạch của bạn sẽ được hiển thị tại đây.\",\"ProcessingTitle\":\"Đang ước tính đề xuất...\",\"ProcessingDescription\":\"Quá trình này có thể mất vài giây.\",\"RecommendationFor\":\"Đề xuất cho {count} đồ vật\",\"RecommendedSize\":\"Kích thước kho\",\"BinDimensions\":\"Kích thước (mét)\",\"VolumeUtilization\":\"Hiệu suất sử dụng\",\"ItemsPlaced\":\"Đồ vật đã xếp\",\"UnfittedItemsTitle\":\"Các đồ vật không vừa\",\"AiSummary\":\"Tóm tắt từ AI\",\"Newest\":\"Mới nhất\",\"CustomSubscription\":\"Gói tùy chỉnh\",\"DimensionsOrder\":\"(Dài × Rộng × Cao)\",\"IncludedItemsTitle\":\"Đồ vật được chọn\",\"GotIt\":\"Đã hiểu\",\"NoPackingSolutionFound\":\"Không tìm thấy giải pháp xếp kho\",\"TotalVolume\":\"Tổng thể tích thực\",\"TotalFromItems\":\"Tổng từ {count} đồ vật\",\"RecommendBinSize\":\"Đề xuất kích thước kho\",\"RecommendedBinSize\":\"Kích thước kho đề xuất\",\"PackingReview3D\":\"Xem trước 3D\",\"ItemsToStore\":\"Đồ vật cần lưu trữ ({count})\",\"Unknown\":\"Không xác định\",\"ShowPackingPlan\":\"Xem mô hình sắp xếp 3D\",\"HidePackingPlan\":\"Ẩn mô hình sắp xếp 3D\",\"HideItemsList\":\"Ẩn danh sách đồ vật\",\"BetaFeatureWarning\":\"Mô hình sắp xếp 3D được tạo bởi AI chỉ là tài liệu tham khảo. Các cách sắp xếp thực tế có thể khác nhau.\",\"SummaryComplete\":\"Tính toán hoàn tất! Dựa trên **{itemCount} đồ vật** của bạn, mình đề xuất kho **{storageType}** nhé!.\",\"SummaryDimensions\":\"**Kích thước:** {width}m × {depth}m × {height}m (Dài x Sâu x Cao)\",\"SummaryVolume\":\"**Tổng thể tích ước tính:** {volume} m³\",\"Expand\":\"Mở rộng\",\"Collapse\":\"Thu gọn\"},\"MuteMic\":\"Tắt micro\",\"UnmuteMic\":\"Mở micro\",\"StartCamera\":\"Bắt đầu camera\",\"StopCamera\":\"Dừng camera\",\"PauseSession\":\"Tạm dừng phiên\",\"ResumeSession\":\"Tiếp tục phiên\",\"WaitingForResumableSession\":\"Đang chờ phiên tiếp tục\",\"SessionPaused\":\"Đã tạm dừng phiên\",\"Connecting\":\"Đang kết nối\",\"Reconnecting\":\"Đang kết nối lại...\",\"ReconnectingSubtitle\":\"Vui lòng chờ trong khi chúng tôi khôi phục phiên của bạn.\",\"EndSession\":\"Kết thúc phiên\",\"StartVoiceChat\":\"Bắt đầu cuộc trò chuyện bằng giọng nói\",\"LiveChat\":\"Trò chuyện trực tiếp\",\"CloseNavigation\":\"Đóng điều hướng\",\"OpenNavigation\":\"Mở điều hướng\",\"LiveStream\":\"Phát trực tiếp\",\"OpenPanel\":\"Mở bảng điều khiển\",\"LiveChatWithOurChatbot\":\"Trò chuyện trực tiếp với Chatbot của chúng tôi\",\"EngageInARealtimeConversationWithOurChatbotUsingVoice\":\"Tham gia cuộc trò chuyện thời gian thực với chatbot của chúng tôi bằng giọng nói\",\"Disconnected\":\"Đã ngắt kết nối\",\"Connected\":\"Đã kết nối\",\"Processing\":\"Đang xử lý\",\"EnterMessageEnterToSendShiftEnterToGoToNewLine\":\"Nhập tin nhắn (Enter để gửi, Shift+Enter để xuống dòng mới)\",\"SendMessage\":\"Gửi tin nhắn\",\"EnterMessageCtrlEnterToSend\":\"Nhập tin nhắn (Ctrl+Enter để gửi)\",\"CloseSettings\":\"Đóng cài đặt\",\"Home\":\"Trang chủ\",\"Settings\":\"Cài đặt\",\"ClosePanel\":\"Đóng\",\"WelcomeMessage\":\"Chào mừng đến với\",\"AssistantName\":\"Trợ lý ảo của Mystorage\",\"YouAreConnectedPressMicToStart\":\"Bạn đã kết nối. Nhấn vào micro để bắt đầu nói\",\"ConnectToStartAVoiceConversationWithOurAiAssistant\":\"Hãy kết nối để bắt đầu cuộc trò chuyện bằng giọng nói với trợ lý AI của chúng tôi\",\"ResponseLanguage\":\"Ngôn ngữ phản hồi\",\"SelectLanguage\":\"Chọn ngôn ngữ\",\"CameraPlaceholder\":\"Nguồn cấp dữ liệu máy ảnh của bạn sẽ được hiển thị ở đây\",\"Streaming\":\"Đang truyền\",\"Console\":\"Bảng điều khiển\",\"Conversations\":\"Cuộc trò chuyện\",\"ToolUse\":\"Sử dụng công cụ\",\"All\":\"Tất cả\",\"Paused\":\"Đã tạm dừng\",\"TypeSomething\":\"Nhập gì đó\",\"Send\":\"gửi\",\"English\":\"Tiếng Anh\",\"Vietnamese\":\"Tiếng Việt\",\"Korean\":\"Tiếng Hàn\",\"Japanese\":\"Tiếng Nhật\",\"SwapCamera\":\"Chuyển máy ảnh\",\"ItemDetailModal\":{\"Title\":\"Chi tiết ảnh chụp\",\"DeleteConfirmation\":\"Bạn có chắc chắn muốn xóa ảnh này không?\",\"Close\":\"Đóng\",\"AltDetailedView\":\"Chế độ xem chi tiết của các mục đã chụp\",\"ItemsInImage\":\"Đồ vật trong ảnh:\",\"Quantity\":\"Số lượng\",\"Width\":\"Rộng\",\"Height\":\"Cao\",\"Depth\":\"Sâu\",\"DeleteButton\":\"Xóa ảnh này\",\"title\":\"Chỉnh sửa chi tiết đồ vật\",\"widthLabel\":\"Rộng (mm)\",\"depthLabel\":\"Sâu (mm)\",\"heightLabel\":\"Cao (mm)\",\"quantityLabel\":\"Số lượng\",\"saveButton\":\"Lưu thay đổi\",\"imageAlt\":\"Hình ảnh của đồ vật\",\"itemImageAlt\":\"Ảnh đồ vật\",\"closeButtonLabel\":\"Đóng\",\"deleteAllButton\":\"Xóa tất cả đồ vật trong ảnh\",\"deleteAllConfirmation\":{\"title\":\"Xác nhận xóa\",\"message\":\"Bạn có chắc chắn muốn xóa tất cả các đồ vật được nhận diện từ ảnh này không? Hành động này không thể hoàn tác.\",\"confirmButton\":\"Có, Xóa\",\"cancelButton\":\"Hủy\"},\"errors\":{\"nameRequired\":\"Tên đồ vật là bắt buộc.\",\"nameTooLong\":\"Tên không được vượt quá {max} ký tự.\",\"quantityRange\":\"Số lượng phải nằm trong khoảng từ {min} đến {max}.\",\"dimensionRange\":\"Kích thước phải nằm trong khoảng từ {min} đến {max}.\"}},\"ItemListPanel\":{\"title\":\"Danh sách đồ vật\",\"emptyStateTitle\":\"Không có đồ vật nào\",\"emptyStateDescriptionTextMode\":\"Tải lên ảnh các đồ vật của bạn.\",\"emptyStateDescriptionLiveMode\":\"Sử dụng Camera để chụp ảnh đồ vật của bạn.\",\"itemSingular\":\"đồ vật\",\"itemPlural\":\"đồ vật\",\"itemCount\":\"{count, plural, =1 {# đồ vật} other {# đồ vật}}\",\"removeItemLabel\":\"Xóa {itemName}\",\"viewDetailsLabel\":\"Xem chi tiết cho {itemName}\",\"clearAllButtonLabel\":\"Xóa tất cả\",\"clearAllModal\":{\"title\":\"Xóa danh sách đồ vật\",\"message\":\"Bạn có chắc chắn muốn xóa vĩnh viễn danh sách đồ vật đã chụp? Hành động này không thể hoàn tác.\",\"confirmButton\":\"Xóa\",\"cancelButton\":\"Hủy\"},\"selectAllLabel\":\"Chọn tất cả\",\"deselectAllLabel\":\"Bỏ chọn tất cả\"},\"CapturedItemsTray\":{\"Saved\":\"Đã lưu\",\"ViewDetails\":\"Xem chi tiết\",\"NoItemsSoFar\":\"Chưa có đồ vật nào\",\"ItemsDescription\":\"Đồ vật của bạn sẽ được hiển thị tại đây.\"},\"SizeEstimatorItemsPanel\":{\"CapturedItems\":\"Đồ vật đã chụp\",\"CapturesSingular\":\"{count} ảnh\",\"CapturesPlural\":\"{count} ảnh\",\"FailedSingular\":\"{count} ảnh thất bại\",\"FailedPlural\":\"{count} ảnh thất bại\",\"NoItemsSoFar\":\"Chưa có đồ vật nào\",\"ItemsDescription\":\"Đồ vật của bạn sẽ được hiển thị tại đây.\",\"Items\":\"đồ vật\",\"OversizedItemSingular\":\"{count} đồ vật quá khổ\",\"OversizedItemPlural\":\"{count} đồ vật quá khổ\",\"SmallItemSingular\":\"{count} đồ vật nhỏ\",\"SmallItemPlural\":\"{count} đồ vật nhỏ\",\"DuplicateItemSingular\":\"{count} đồ vật trùng\",\"DuplicateItemPlural\":\"{count} đồ vật trùng\",\"DuplicateItemWarning\":\"Trùng lặp - đã thêm từ ảnh khác\",\"UploadedFile\":\"Tệp đã tải lên\",\"LiveCapture\":\"Ảnh chụp trực tiếp\",\"UploadTitle\":\"📁 Tải lên\",\"LiveCaptureTitle\":\"📷 Chụp trực tiếp\",\"ItemCount\":\"{count, plural, =1 {# đồ vật} other {# đồ vật}}\",\"ItemsInThisFile\":\"Đồ vật trong ảnh này\",\"Each\":\"mỗi cái\",\"CannotStoreMaxHeight\":\"Không thể lưu trữ (Chiều cao tối đa 2m)\",\"CannotStore\":\"Không thể lưu\",\"Store\":\"Lưu trữ\",\"Skip\":\"Bỏ qua\",\"ProcessingFailed\":\"Xử lý thất bại\",\"FailedFilePreview\":\"Xem trước ảnh thất bại\",\"Skipped\":\"Đã bỏ qua\",\"Failed\":\"Thất bại\",\"CouldNotProcessAfterRetry\":\"Không thể xử lý sau khi thử lại\",\"Retrying\":\"Đang thử lại...\",\"Retry\":\"Thử lại\",\"Processing\":\"Đang xử lý...\",\"ItemsThatDontFit\":\"Đồ vật không vừa\",\"CollapseItemList\":\"Thu gọn danh sách\",\"ExpandItemList\":\"Mở rộng danh sách\",\"Width\":\"Rộng\",\"Height\":\"Cao\",\"Depth\":\"Sâu\",\"WidthAbbr\":\"R\",\"HeightAbbr\":\"C\",\"DepthAbbr\":\"S\",\"PackedItems\":\"Đồ vật đã xếp ({count})\",\"TopView\":\"Nhìn từ trên\",\"BottomView\":\"Nhìn từ dưới\",\"RightView\":\"Nhìn từ phải\",\"LeftView\":\"Nhìn từ trái\",\"FrontView\":\"Nhìn từ trước\",\"BackView\":\"Nhìn từ sau\",\"NoItemsDetected\":\"Không phát hiện đồ vật\",\"NoItemsDescription\":\"Không phát hiện đồ vật nào trong ảnh\",\"NoItemsAfterRetry\":\"Vẫn không tìm thấy đồ vật sau khi thử lại\",\"NoItems\":\"Không có đồ vật\",\"RetryAnalysis\":\"Thử lại\",\"AnalysisTimedOut\":\"Phân tích hết thời gian\",\"AnalysisFailed\":\"Phân tích thất bại\"},\"SettingsDialog\":{\"SettingsWarning\":\"Các cài đặt này chỉ có thể được áp dụng trước khi kết nối và sẽ ghi đè các cài đặt khác\",\"SystemInstructions\":\"Hướng dẫn hệ thống\",\"FunctionDeclarations\":\"Khai báo hàm\"},\"ToolHandler\":{\"SomeFilesFailedToUpload\":\"Một số ảnh đang lỗi (tải lên hoặc phân tích). Vui lòng thử lại hoặc xóa khỏi danh sách trước khi gửi.\",\"StatusCalculating\":\"Một phép tính đang được xử lý. Vui lòng chờ trong giây lát\",\"StatusNotCalculating\":\"Không có phép tính nào đang chạy. Có thể bắt đầu một yêu cầu ước tính mới.\",\"UploadingFiles\":\"Đang tải lên {count} tệp...\",\"UploadSuccess\":\"Tải tệp lên thành công!\",\"UploadFailed\":\"Tải lên thất bại: {error}\",\"UnknownError\":\"Đã xảy ra lỗi không xác định\",\"GetItemListDescription\":\"Lấy danh sách tất cả các mục đã thêm vào danh sách lưu trữ của người dùng.\",\"ItemDimensionSchemaDescription\":\"Kích thước ước tính của mặt hàng bằng centimet (mm)\",\"ItemDimensionSchemaName\":\"Tên của mặt hàng\",\"ItemDimensionSchemaWidth\":\"Chiều rộng của mặt hàng tính bằng mm\",\"ItemDimensionSchemaHeight\":\"Chiều cao của mặt hàng tính bằng mm\",\"ItemDimensionSchemaDepth\":\"Chiều sâu (hoặc chiều dài) của mặt hàng tính bằng mm\",\"ItemDimensionSchemaQuantity\":\"Số lượng các mặt hàng giống hệt nhau. Mặc định là 1 nếu người dùng không chỉ định\",\"CaptureItemSnapshotDescription\":\"Chụp ảnh nhanh và lưu chi tiết các mục mà người dùng muốn lưu trữ. Bạn phải ước tính kích thước (chiều rộng, chiều cao, chiều sâu) bằng centimet cho mỗi mục. Bạn cũng phải lắng nghe số lượng các mục (ví dụ: '5 cái ghế') và bao gồm nó. Nếu không đề cập đến số lượng, nó mặc định là 1\",\"CaptureItemSnapshotItems\":\"Một mảng các mục sẽ được lưu trong ảnh chụp nhanh này. Mỗi mục phải bao gồm tên, kích thước và số lượng của nó\",\"RemoveItemSnapshotDescription\":\"Xóa một mục đã lưu trước đó khỏi danh sách. Sử dụng điều này khi người dùng yêu cầu rõ ràng để xóa, xóa hoặc loại bỏ một mục. Bạn nên yêu cầu xác nhận hoặc làm rõ mục nào cần xóa nếu không rõ ràng\",\"RemoveItemSnapshotItemName\":\"Tên của mục cần xóa. Cố gắng khớp tên này với các mục đã được lưu\",\"EditItemSnapshotDescription\":\"Chỉnh sửa tên, kích thước và/hoặc số lượng của một mục đã lưu trước đó. Sử dụng điều này khi người dùng muốn thay đổi, cập nhật hoặc sửa chi tiết của một mục\",\"EditItemSnapshotItemNameCurrent\":\"Tên hiện tại của mục cần chỉnh sửa\",\"EditItemSnapshotNewName\":\"Tên mới cho mục, nếu người dùng muốn thay đổi nó\",\"EditItemSnapshotNewDimensionsDescription\":\"Một đối tượng chứa các kích thước mới, nếu người dùng muốn thay đổi chúng\",\"EditItemSnapshotNewWidth\":\"Chiều rộng mới tính bằng mm\",\"EditItemSnapshotNewHeight\":\"Chiều cao mới tính bằng mm\",\"EditItemSnapshotNewDepth\":\"Chiều sâu mới tính bằng mm\",\"EditItemSnapshotNewQuantity\":\"Số lượng mới cho mặt hàng, nếu người dùng muốn thay đổi nó\",\"OpenGoogleMapDescription\":\"Mở Google Map để hiển thị một vị trí cụ thể.\",\"OpenGoogleMapLocation\":\"Địa chỉ đầy đủ hoặc tên vị trí để hiển thị trên bản đồ.\",\"UnknownFunctionCall\":\"Lệnh gọi hàm không xác định: {functionName}\",\"MissingArguments\":\"Thiếu tham số cho hàm: {functionName}\",\"LogCaptureSnapshot\":\"[Lệnh gọi công cụ] Đang chụp ảnh nhanh cho các mục: {items}\",\"CaptureSuccess\":\"Đã chụp thành công {count} mục\",\"CaptureError\":\"Không thể chụp ảnh từ luồng video\",\"LogRemoveItem\":\"[Lệnh gọi công cụ] Đang xóa mục: {itemName}\",\"LogEditItem\":\"[Lệnh gọi công cụ] Đang chỉnh sửa mục: {itemName} với các bản cập nhật {updates}\",\"LogFinalize\":\"[Lệnh gọi công cụ] Đang hoàn tất và gửi danh sách mục để nhận đề xuất\"},\"LanguageDropdown\":{\"FlagAlt\":\"Cờ {language}\"},\"VoiceSelector\":{\"Voice\":\"Giọng nói\"},\"Logger\":{\"Interrupted\":\"đã bị gián đoạn\",\"TurnComplete\":\"hoàn thành lượt\",\"ExecutableCode\":\"mã thực thi\",\"CodeExecutionResult\":\"kết quả thực thi mã\",\"InlineData\":\"Dữ liệu nội tuyến\",\"User\":\"Người dùng\",\"FunctionCall\":\"Gọi hàm\",\"Ids\":\"ID\",\"FunctionResponse\":\"Phản hồi hàm\",\"Model\":\"Mô hình\"},\"ResponseModalitySelector\":{\"ResponseModality\":\"Chế độ phản hồi\"},\"NotFoundPage\":{\"PageNotFound\":\"Rất tiếc! Không tìm thấy trang\",\"PageDescription\":\"Trang bạn đang tìm kiếm có thể tạm thời không khả dụng hoặc không tồn tại\",\"GoHomeButton\":\"Quay lại trang chủ\"},\"ChatPageTitle\":\"Trò chuyện AI\",\"ChatPanel\":{\"HeaderTitle\":\"Trợ lý MyStorage\",\"SendFiles\":\"Gửi tập tin\",\"SwitchToLiveChat\":\"Chuyển sang chế độ Camera\",\"CameraMode\":\"Chế độ Camera\",\"InitializingSession\":\"Đang khởi tạo phiên...\",\"Loading\":\"Đang tải...\",\"PriceListTitle\":\"Bảng giá MyStorage\",\"Subtitle\":\"Vui lòng cấp quyền truy cập vào microphone và camera của bạn để bắt đầu trò chuyện trực tiếp.\",\"ItemManagementSummary\":{\"Title\":\"Cập nhật danh sách đồ vật\",\"SummaryAdded\":\"Đã thêm {count} mục\",\"SummaryUpdated\":\"Đã cập nhật {count} mục\",\"SummaryRemoved\":\"Đã xóa {count} mục\",\"Added\":\"Đã thêm\",\"Updated\":\"Đã cập nhật\",\"Removed\":\"Đã xóa\",\"Action\":\"Hành động\",\"ChangeName\":\"Tên: \\\"{from}\\\" → \\\"{to}\\\"\",\"ChangeQuantity\":\"Số lượng: {from} → {to}\",\"ChangeDimension\":\"{dim}: {from}mm → {to}mm\"},\"WarningModals\":{\"closeButton\":\"Đã Hiểu\",\"maxItemsTitle\":\"Vượt Quá Giới Hạn Đồ Vật\",\"maxItemsMessage\":\"Công cụ ước tính hoạt động tốt nhất với tối đa {max} món đồ. Vui lòng sử dụng bảng điều khiển bên cạnh để xóa bớt đồ vật khỏi danh sách của bạn trước khi tiếp tục.\"},\"LiveSessionErrorTitle\":\"Lỗi Kết Nối Phiên\",\"LiveSessionErrorSubtitle\":\"Đã xảy ra sự cố khi kết nối với phiên trực tiếp. Vui lòng thử lại sau.\",\"Reconnecting\":\"Đang kết nối lại...\",\"ReconnectingSubtitle\":\"Vui lòng chờ trong khi chúng tôi khôi phục phiên của bạn.\",\"PrivacyNotice\":\"Khi trò chuyện với tôi, bạn đồng ý với \u003cprivacyPolicy\u003eChính sách quyền riêng tư\u003c/privacyPolicy\u003e.\"},\"MessageList\":{\"EmptyState\":{\"Title\":\"Chào mừng đến với Trợ lý MyStorage\",\"Thinking\":\"Đang suy nghĩ\",\"Speaking\":\"Đang nói\",\"Description\":\"Hôm nay tôi có thể giúp gì cho nhu cầu lưu trữ của bạn?\"}},\"ChatInputChatMode\":{\"AttachFiles\":\"Đính kèm ảnh\",\"ConnectingToAudioSession\":\"Kết nối microphone...\",\"SendMessage\":\"Gửi tin nhắn\",\"StopGenerating\":\"Dừng\",\"Placeholder\":\"Nhắn tin...\",\"PlaceholderLoading\":\"...\",\"ChatInputErrorTitleMaxFiles\":\"Vượt quá số lượng tệp tối đa\",\"ChatInputErrorMaxFiles\":\"Bạn chỉ có thể tải lên tổng cộng tối đa {max} tệp.\",\"ChatInputErrorMaxConcurrentFiles\":\"Bạn chỉ có thể chọn tối đa {max} tệp cùng một lúc.\",\"ChatInputErrorTitleFileSize\":\"Tệp quá lớn\",\"ChatInputRemoveFile\":\"Xóa tệp {fileName}\",\"ChatInputMaxFilesReached\":\"Bạn đã đạt đến giới hạn tối đa {max} tệp.\",\"removeSomeFiles\":\"Vui lòng xóa một số tệp để thêm tệp mới.\",\"ChatInputMaxConcurrentFiles\":\"Đã đạt giới hạn {max} tệp đang chờ/đang xử lý.\",\"ChatInputErrorExceedsConcurrent\":\"Không thể thêm tệp. Bạn chỉ có thể chọn thêm {remaining} tệp (giới hạn là {max} tệp).\",\"removeSomeFilesToContinue\":\"Vui lòng gửi hoặc xóa bớt tệp để tiếp tục.\",\"uploadingStatus\":\"Đang tải tệp lên...\",\"processingStatus\":\"Đang xử lý...\",\"UploadingAndAnalyzing\":\"Đang tải lên và tự động phân tích các vật phẩm trong ảnh...\",\"SelectedImages\":\"Bạn đã chọn {count, plural, =1 {# ảnh} other {# ảnh}}\",\"AllImagesAnalyzed\":\"Tất cả ảnh đã được phân tích thành công. Vui lòng xác nhận.\",\"pleaseWait\":\"Vui lòng chờ trong giây lát.\",\"promptDrag\":\"Kéo \u0026 thả lên tới {count} tệp\",\"promptClick\":\"hoặc nhấn để chọn\",\"fileConstraints\":\"JPG, JPEG, PNG, WebP, PDF · Tối đa 30MB mỗi tệp\",\"AttachFile\":\"Đính kèm tệp\",\"calculateButtonLabel\":\"Uớc tính giải pháp lưu trữ\",\"calculateButtonText\":\"Ước tính\",\"uploadPrompt\":\"Tải ảnh lên\",\"liveModeButtonLabel\":\"Chuyển sang chế độ Camera\",\"liveModeButtonText\":\"Chế độ Camera\",\"maxItemsTooltip\":\"Không thể ước tính do danh sách đã vượt quá {max} món đồ.\",\"ChatInputErrorFileSize\":\"Tệp {name} ({actualSize}) quá lớn. Kích thước tối đa là {maxSize} MB.\",\"ChatInputErrorMultipleFilesSize\":\"Các tệp sau đây quá lớn (tối đa {maxSize} MB):\\n{fileList}\",\"UploadErrorTitle\":\"Lỗi Tải Tệp Lên\",\"MicReminder\":\"Bạn quên mở mic?\"},\"ChatInputUploadMode\":{\"SendMessage\":\"Gửi tin nhắn\",\"StopGenerating\":\"Dừng\",\"Placeholder\":\"Tải tệp lên...\",\"PlaceholderLoading\":\"...\",\"ChatInputErrorTitleMaxFiles\":\"Vượt quá số lượng tệp tối đa\",\"ChatInputErrorMaxFiles\":\"Bạn chỉ có thể tải lên tổng cộng tối đa {max} tệp.\",\"ChatInputErrorMaxConcurrentFiles\":\"Bạn chỉ có thể chọn tối đa {max} tệp cùng một lúc.\",\"ChatInputErrorTitleFileSize\":\"Tệp quá lớn\",\"ChatInputRemoveFile\":\"Xóa tệp {fileName}\",\"ChatInputMaxFilesReached\":\"Bạn đã đạt đến giới hạn tối đa {max} tệp.\",\"removeSomeFiles\":\"Vui lòng xóa một số tệp để thêm tệp mới.\",\"ChatInputMaxConcurrentFiles\":\"Đã đạt giới hạn {max} tệp đang chờ/đang xử lý.\",\"ChatInputErrorExceedsConcurrent\":\"Không thể thêm tệp. Bạn chỉ có thể chọn thêm {remaining} tệp (giới hạn là {max} tệp).\",\"removeSomeFilesToContinue\":\"Vui lòng gửi hoặc xóa bớt tệp để tiếp tục.\",\"uploadingStatus\":\"Đang tải tệp lên...\",\"processingStatus\":\"Đang xử lý...\",\"UploadingAndAnalyzing\":\"Đang tải lên và tự động phân tích các vật phẩm trong ảnh...\",\"SelectedImages\":\"Bạn đã chọn {count, plural, =1 {# ảnh} other {# ảnh}}\",\"AllImagesAnalyzed\":\"Tất cả ảnh đã được phân tích thành công. Vui lòng xác nhận.\",\"pleaseWait\":\"Vui lòng chờ trong giây lát.\",\"promptDrag\":\"Kéo \u0026 thả lên tới {count} tệp\",\"promptClick\":\"hoặc nhấn để chọn\",\"fileConstraints\":\"JPG, JPEG, PNG, WebP, PDF · Tối đa 30MB mỗi tệp\",\"AttachFile\":\"Đính kèm tệp\",\"calculateButtonLabel\":\"Uớc tính giải pháp lưu trữ\",\"calculateButtonText\":\"Ước tính\",\"uploadPrompt\":\"Tải ảnh lên\",\"liveModeButtonLabel\":\"Chuyển sang chế độ Camera\",\"liveModeButtonText\":\"Chế độ Camera\",\"maxItemsTooltip\":\"Không thể ước tính do danh sách đã vượt quá {max} món đồ.\",\"ChatInputErrorFileSize\":\"Tệp {name} ({actualSize}) quá lớn. Kích thước tối đa là {maxSize} MB.\",\"ChatInputErrorMultipleFilesSize\":\"Các tệp sau đây quá lớn (tối đa {maxSize} MB):\\n{fileList}\",\"UploadErrorTitle\":\"Lỗi Tải Tệp Lên\"},\"ModelSelector\":{\"Label\":\"Chọn Mô hình AI\"},\"UserInfoCollection\":{\"Title\":\"Thông tin của bạn\",\"Subtitle\":\"Vui lòng cung cấp thông tin để chúng tôi có thể hỗ trợ bạn tốt hơn\",\"NameLabel\":\"Tên của bạn\",\"NamePlaceholder\":\"Nhập tên của bạn\",\"EmailLabel\":\"Email\",\"EmailPlaceholder\":\"your.email@example.com\",\"PhoneLabel\":\"Số điện thoại\",\"PhonePlaceholder\":\"0912345678\",\"SubmitButton\":\"Tiếp tục\",\"Submitting\":\"Đang lưu...\",\"ValidationErrors\":{\"nameRequired\":\"Vui lòng nhập tên của bạn\",\"nameInvalid\":\"Vui lòng nhập tên hợp lệ (2-50 ký tự, chỉ chữ cái)\",\"emailRequired\":\"Vui lòng nhập địa chỉ email\",\"emailInvalid\":\"Vui lòng nhập địa chỉ email hợp lệ\",\"phoneRequired\":\"Vui lòng nhập số điện thoại\",\"phoneInvalid\":\"Vui lòng nhập số điện thoại Việt Nam hợp lệ (VD: 0912345678)\",\"submitFailed\":\"Không thể lưu thông tin. Vui lòng thử lại.\"}},\"Introduction\":{\"Title\":\"Trợ lý cá nhân \u003chighlight\u003eMyStorage\u003c/highlight\u003e\",\"Subtitle\":\"Chào bạn, tôi có thể giúp gì để việc lưu kho dễ dàng hơn\",\"UploadNoteFileTypes\":\"Hỗ trợ JPG, JPEG, PNG, WebP và PDF.\",\"UploadNoteFileSize\":\"Kích thước tệp tối đa là 30MB mỗi tệp.\",\"UploadNoteMaxTotalFiles\":\"Bạn có thể tải lên tổng cộng tối đa {maxTotal} tệp.\",\"UploadNoteMaxConcurrentFiles\":\"Chỉ có thể chọn tối đa {maxConcurrent} tệp trong một lần tải lên.\",\"CapabilitiesHeader\":\"Tôi có thể làm gì\",\"CapabilityAnswerTitle\":\"Trả lời câu hỏi về MyStorage\",\"CapabilityAnswerDescription\":\"Hỏi tôi bất cứ điều gì về giá cả, an ninh, giảm giá, hoặc quy trình lưu kho của MyStorage.\",\"CapabilityAnalyzeTitle\":\"Ước lượng đồ đạc qua Camera\",\"CapabilityAnalyzeDescription\":\"Không cần đo đạc thủ công. Hãy chụp ảnh hoặc quay video, tôi sẽ tự động phân tích kích thước giúp bạn.\",\"CapabilityRecommendTitle\":\"Tìm gói kho phù hợp\",\"CapabilityRecommendDescription\":\"Dựa trên lượng đồ đạc, tôi sẽ gợi ý giải pháp tiết kiệm và tối ưu không gian nhất cho bạn.\",\"SuggestionsHeader\":\"Bắt đầu nhanh\",\"SuggestionPriceForSize\":\"Giá thuê kho nhỏ 3m³ có điều hòa là bao nhiêu?\",\"SuggestionLongTermDiscount\":\"Nếu thuê 12 tháng thì có giảm giá gì không?\",\"SuggestionFullPriceList\":\"Cho tôi xem bảng giá đầy đủ của bạn.\",\"SuggestionComparePrice\":\"Tại sao giá của bạn lại cao hơn các dịch vụ khác?\",\"SuggestionShelfVsUnit\":\"Giá giữa Kho Kệ và Kho Tự Quản khác nhau thế nào?\",\"SuggestionDeposit\":\"Tiền đặt cọc có được hoàn lại không?\",\"SuggestionWineStorage\":\"Nói thêm về dịch vụ lưu trữ rượu vang của bạn đi.\",\"SuggestionSecurityFeatures\":\"Làm thế nào để đảm bảo đồ của tôi được an toàn?\",\"SuggestionCompareServices\":\"MyStorage có gì tốt hơn các kho lưu trữ khác?\",\"SuggestionAccessHours\":\"Tôi có thể ra vào kho của mình 24/7 không?\",\"SuggestionCoworkingSpace\":\"Bạn thực sự có không gian làm việc miễn phí à?\",\"SuggestionPestControl\":\"Kho của bạn chống côn trùng và độ ẩm thế nào?\",\"SuggestionLocationConcern\":\"Tôi lo là kho ở Đồng Nai quá xa. Bên bạn giải quyết vấn đề này thế nào?\",\"SuggestionLocation\":\"Kho của bạn ở đâu vậy?\",\"SuggestionMovingService\":\"Bạn có cung cấp dịch vụ chuyển đồ và đóng gói không?\",\"SuggestionPrivacyShared\":\"Làm thế nào để đảm bảo an toàn trong kho dùng chung?\",\"SuggestionProhibitedItems\":\"Những đồ vật nào tôi không được phép lưu trữ?\",\"SuggestionStartPlanning\":\"Giúp tôi tính xem tôi cần thuê kho kích thước nào.\",\"SuggestionEstimateForItems\":\"Tôi muốn gửi một sofa và một tủ lạnh. Cần bao nhiêu không gian?\",\"SuggestionEstimateForApartment\":\"Kích thước kho cần thiết cho nội thất căn hộ 1 phòng ngủ là bao nhiêu?\"},\"GoHome\":\"Về trang chủ\",\"LiveIntroduction\":{\"Title\":\"Đã bật Chế độ Camera\",\"PausedTitle\":\"Đã tạm dừng Chế độ Camera\",\"Subtitle\":\"Hướng camera của bạn vào các mục để bắt đầu. Tôi có thể xác định các đối tượng, giúp bạn xây dựng một bản kiểm kê, và sau đó đề xuất giải pháp lưu trữ hoàn hảo.\"},\"SuggestedActions\":{\"displayPriceList\":\"Bảng giá\",\"openGoogleMap\":\"Xem trên bản đồ\",\"goToMyStorageWebsite\":\"Truy cập website\",\"switchToLiveMode\":\"Chế độ Camera\",\"estimateSize\":\"Ước tính kích thước\",\"goToMyStorageBookingWebSite\":\"Đặt Kho Ngay\"},\"WarningModals\":{\"closeButton\":\"Đã Hiểu\",\"maxItemsTitle\":\"Vượt Quá Giới Hạn Đồ Vật\",\"maxItemsMessage\":\"Công cụ ước tính hoạt động tốt nhất với tối đa {max} món đồ. Vui lòng sử dụng bảng điều khiển bên cạnh để bỏ lựa chọn hoặc xóa bớt đồ vật khỏi danh sách của bạn trước khi tiếp tục.\"},\"UserActionGroup\":{\"title\":\"{count} hành động\",\"expand\":\"Hiển thị thêm\",\"collapse\":\"Hiển thị ít hơn\"},\"Back\":\"Quay về\",\"SelectedItemInfo\":{\"Selected\":\"Đã chọn\"},\"AiSummary\":{\"recommendation\":\"Mình đề xuất một đơn vị lưu trữ {subscription} cho các đồ vật của bạn. \",\"customDimensions\":\"Kích thước cuối cùng sẽ là {w} (Rộng) x {d} (Sâu) x {h} (Cao). \",\"standardDimensions\":\"Kích thước cho đơn vị này là {w} (Rộng) x {d} (Sâu) x {h} (Cao). \",\"volume\":\"Đơn vị này có tổng thể tích là {volume} (Rộng x Sâu x Cao). \",\"noSolutionFallback\":\"Tính toán đóng gói không thành công và không tìm thấy kế hoạch hợp lệ. Điều này có thể do một hoặc nhiều đồ vật quá lớn để vừa với bất kỳ tùy chọn lưu trữ nào có sẵn.\",\"noSolution\":{\"introduction\":\"Rất tiếc, sau khi phân tích các đồ vật của bạn, tôi không thể tìm thấy giải pháp lưu trữ phù hợp.\",\"commonReason\":\"Điều này thường xảy ra nếu một hoặc nhiều đồ vật quá lớn so với các tùy chọn lưu trữ tiêu chuẩn hoặc thậm chí tùy chỉnh của chúng tôi.\",\"largestItem\":\"Đồ vật {itemName} có vẻ đặc biệt lớn.\",\"suggestion\":\"Bạn có thể cân nhắc tháo rời nó, nếu có thể, hoặc tìm kiếm một giải pháp lưu trữ chuyên dụng cho các đồ vật quá khổ.\",\"nextSteps\":\"Bạn có thể vui lòng kiểm tra lại kích thước các đồ vật của mình, hoặc bạn có muốn thử xóa một đồ vật và chạy lại tính toán không?\"}},\"Stow\":{\"Footer\":\"STOW có thể nhầm. Anh/chị kiểm tra giá trước khi đặt nhé.\",\"ComposerPlaceholder\":\"Hỏi về kho, kích thước, hoặc giá thuê…\",\"ComposerLabels\":{\"Attach\":\"Ảnh\",\"Audio\":\"Thoại\",\"Video\":\"Video\",\"AddPhoto\":\"Thêm ảnh\",\"ShowCamera\":\"Mở camera\",\"TalkLive\":\"Nói trực tiếp\",\"Dictate\":\"Đọc để nhập văn bản\",\"RequestingMic\":\"Đang xin quyền truy cập micro...\",\"Listening\":\"Đang nghe... chạm mic để dừng\",\"Transcribing\":\"Đang chuyển giọng nói...\"},\"Drawer\":{\"NewConversation\":\"Cuộc trò chuyện mới\",\"Recent\":\"Gần đây\",\"NoConversationsYet\":\"Chưa có cuộc trò chuyện nào.\",\"SavedEstimates\":\"Ước tính đã lưu\",\"Settings\":\"Cài đặt\",\"SignOut\":\"Đăng xuất\"},\"ItemTray\":{\"Title\":\"Đồ vật của bạn\",\"Summary\":\"{itemCount, plural, one {# đồ vật} other {# đồ vật}} qua {captureCount, plural, one {# lần chụp} other {# lần chụp}}\",\"FilterInfoTooltip\":\"Số lượng này có thể chênh lệch so với danh sách bạn cung cấp do AI tự động loại bỏ các đồ vật quá nhỏ, quá lớn, bị trùng, hoặc không đủ thông tin để ước lượng.\",\"Upload\":\"Tải lên\",\"Camera\":\"Camera\",\"ItemCountInline\":\"{count, plural, one {# đồ vật} other {# đồ vật}}\",\"Items\":\"đồ vật\",\"Each\":\"mỗi cái\",\"Width\":\"Rộng\",\"Depth\":\"Sâu\",\"Height\":\"Cao\",\"Store\":\"Lưu\",\"Skip\":\"Bỏ qua\",\"CannotStore\":\"Không lưu được\",\"Analyzing\":\"Đang phân tích…\",\"AnalyzingBody\":\"Đang nhận diện đồ vật trong ảnh. Thường mất vài giây.\",\"AnalyzeError\":\"Phân tích thất bại\",\"AnalyzeErrorTitle\":\"Không phân tích được ảnh này\",\"NoItemsDetected\":\"Không phát hiện đồ vật\",\"NoItemsDetectedTitle\":\"Không phát hiện đồ vật\",\"NoItemsDetectedBody\":\"Không tìm thấy đồ vật có thể lưu trữ trong ảnh này. Mình thử chụp lại rõ hơn, hoặc xóa ảnh này nhé.\",\"Retry\":\"Phân tích lại\",\"OversizedBadge\":\"{count, plural, one {# quá khổ} other {# quá khổ}}\",\"SmallBadge\":\"{count, plural, one {# quá nhỏ} other {# quá nhỏ}}\",\"DuplicateBadge\":\"{count, plural, one {# trùng} other {# trùng}}\",\"OversizedDetail\":\"Quá cao ({height}m \u003e tối đa {max}m)\",\"SmallDetail\":\"Quá nhỏ để lưu trữ (mặc định bỏ qua)\",\"DuplicateDetail\":\"Có vẻ là đồ trùng (mặc định bỏ qua)\"},\"EmptyState\":{\"Heading\":\"Xin chào — em là STOW, trợ lý bán hàng AI của MyStorage.\",\"Subtitle\":\"Mình có thể hỏi em về MyStorage, các dịch vụ hoặc giá thuê. Có thể chat bằng văn bản, hoặc chuyển sang live (thoại hoặc video) bất cứ lúc nào.\",\"ModesHint\":\"Gõ bên dưới · chạm mic để nói · hoặc mở camera để live\",\"Starters\":{\"Company\":\"Giới thiệu về MyStorage\",\"Services\":\"STOW có những dịch vụ gì?\",\"Pricing\":\"Báo giá lưu trữ giúp em\"}},\"Preview\":{\"More\":\"+{count} đồ vật khác\",\"ItemsCount\":\"{count, plural, one {# đồ vật} other {# đồ vật}}\"},\"SizeCard\":{\"RecommendedSize\":\"Kích thước đề xuất\",\"ItemsCount\":\"{count, plural, one {# đồ vật} other {# đồ vật}}\",\"BookThis\":\"Đặt kho này\",\"BookThisMessage\":\"Tôi muốn đặt kho này\",\"ViewPackingPlan\":\"Xem sắp xếp 3D\",\"ComparePlans\":\"So sánh · {count, plural, one {# lựa chọn} other {# lựa chọn}}\",\"ItemsList\":\"Danh sách đồ vật · {count, plural, one {# đồ vật} other {# đồ vật}}\"},\"PackSheet\":{\"Title\":\"Mô hình sắp xếp 3D\",\"BinSummary\":\"Kho {w}×{h}×{d} · đã sắp xếp {count, plural, one {# đồ vật} other {# đồ vật}}\",\"NoPackingPlan\":\"Không có mô hình sắp xếp cho đề xuất này.\"},\"RelativeTime\":{\"JustNow\":\"vừa xong\",\"Minutes\":\"{count} phút trước\",\"Hours\":\"{count} giờ trước\",\"Days\":\"{count} ngày trước\"},\"SavedLabel\":\"{plan} · {count, plural, one {# đồ vật} other {# đồ vật}}\",\"BookingConfirmation\":{\"Header\":\"Đặt kho thành công\",\"RowPlan\":\"Loại kho\",\"RowMoveIn\":\"Ngày dọn vào\",\"RowName\":\"Tên\",\"RowPhone\":\"Số điện thoại\",\"RowEmail\":\"Email\",\"RowProtection\":\"Gói bảo vệ \u0026 Dịch vụ thêm\",\"AcBadge\":\"Có máy lạnh\",\"AddOnTransportation\":\"Vận chuyển\",\"AddOnHandling\":\"Bốc xếp\",\"AddOnPacking\":\"Đóng gói\",\"Monthly\":\"Hàng tháng\",\"TotalDue\":\"Tổng cần thanh toán\",\"TotalDueWithDeposit\":\"Tổng cần thanh toán · gồm đặt cọc\",\"Discount\":\"Giảm {percent}%\",\"Duration\":\"{count} tháng\"},\"PaymentStatus\":{\"Header\":\"Trạng thái thanh toán\",\"StatusPaid\":\"Đã thanh toán\",\"StatusPending\":\"Đang chờ thanh toán\",\"StatusFailed\":\"Thanh toán thất bại\",\"StatusCancelled\":\"Đã huỷ\",\"StatusRefunded\":\"Đã hoàn tiền\",\"AccessTitle\":\"Thông tin truy cập kho\",\"LockerCode\":\"Mã kho\",\"Passcode\":\"Mật khẩu cửa\",\"ShowPasscode\":\"Hiện mật khẩu\",\"HidePasscode\":\"Ẩn mật khẩu\",\"CustomerCode\":\"Mã khách\",\"Room\":\"Phòng\",\"Location\":\"Địa điểm\",\"MoveInDate\":\"Ngày dọn vào\",\"AccessSavedNote\":\"⚠ Vui lòng lưu thông tin này. Cũng đã được gửi vào email của bạn.\",\"MissingLockerTitle\":\"Đang chờ gán kho\",\"MissingLockerBody\":\"Thanh toán đã thành công. Đội vận hành đang hoàn tất gán kho và sẽ liên hệ trong thời gian sớm nhất. Cần hỗ trợ ngay: gọi \u003cphone\u003e028-7300-2886\u003c/phone\u003e.\",\"ValetNoteTitle\":\"Đã ghi nhận thanh toán\",\"ValetNoteBody\":\"Đội vận hành sẽ liên hệ trong vòng 1 ngày làm việc để sắp xếp kệ chung và lịch nhận đồ tại kho. Cần hỗ trợ: \u003cphone\u003e028-7300-2886\u003c/phone\u003e.\",\"FooterBooking\":\"Booking\",\"FooterInvoice\":\"Invoice\"},\"BookingPayment\":{\"Header\":\"Sẵn sàng thanh toán\",\"Invoice\":\"Hoá đơn #{id}\",\"PayCta\":\"Thanh toán an toàn\",\"ProcessorNote\":\"Thanh toán xử lý qua đối tác — STOW không lưu thông tin thẻ của bạn\"},\"Inventory\":{\"Title\":\"Đã cập nhật danh sách\",\"Count\":\"{count, plural, one {# món} other {# món}}\",\"Subtitle\":\"Trợ lý vừa thêm hoặc sửa các món đồ trong danh sách của bạn.\",\"MoreCount\":\"+ {count} món khác…\"},\"NoSolution\":{\"Title\":\"Không xếp hết được tất cả đồ\",\"TryAgain\":\"Thử lại\"},\"A11y\":{\"AttachFile\":\"Đính kèm tệp\",\"Add\":\"Thêm\",\"OpenStowMenu\":\"Mở menu STOW\",\"StartLiveVideo\":\"Mở video trực tiếp\",\"StartVoice\":\"Bắt đầu trò chuyện thoại\",\"StopVoice\":\"Dừng trò chuyện thoại\",\"TalkToStow\":\"Trò chuyện với STOW\",\"StopVoiceShort\":\"Dừng\",\"StopRecording\":\"Dừng\",\"Dictate\":\"Đọc để nhập\",\"StopDictation\":\"Dừng đọc\",\"RequestingMic\":\"Đang xin quyền truy cập micro\",\"Transcribing\":\"Đang chuyển giọng nói\",\"Send\":\"Gửi\",\"MuteMic\":\"Tắt mic\",\"UnmuteMic\":\"Bật mic\",\"MuteShort\":\"Tắt\",\"UnmuteShort\":\"Bật\",\"EndVoiceSession\":\"Kết thúc thoại\",\"BackToChat\":\"Quay lại trò chuyện\",\"CaptureFrame\":\"Chụp hình\",\"EndSession\":\"Kết thúc\",\"Retry\":\"Thử lại\",\"SwapCamera\":\"Đổi camera\",\"PreviewAlt\":\"Xem trước\",\"ClosePreview\":\"Đóng xem trước\",\"YourItems\":\"Đồ vật của bạn\",\"Close\":\"Đóng\",\"FilterInfo\":\"Thông tin lọc\",\"RemoveCapture\":\"Xoá ảnh chụp này\",\"CaptureDetail\":\"Chi tiết ảnh chụp\",\"Back\":\"Quay lại\",\"StoreAll\":\"Lưu toàn bộ đồ trong ảnh này\",\"SkipAll\":\"Bỏ qua toàn bộ đồ trong ảnh này\",\"StoreItem\":\"Lưu món này\",\"SkipItem\":\"Bỏ qua món này\",\"CapturePreviewAlt\":\"Ảnh chụp\",\"CapturedFrameAlt\":\"Khung hình đã chụp\",\"Remove\":\"Xoá\",\"RemoveFile\":\"Xoá {name}\",\"OpenMenu\":\"Mở menu\",\"CloseDrawer\":\"Đóng menu\",\"NavigationDrawer\":\"Menu điều hướng\",\"Minimize\":\"Thu nhỏ\"},\"Embed\":{\"ListeningPlaceholder\":\"Đang lắng nghe…\",\"Heading\":\"Em hỗ trợ mình lưu trữ gì hôm nay?\",\"Subtitle\":\"Hỏi về kích thước, giá, hoặc bắt đầu báo giá.\",\"Tagline\":\"Trợ lý lưu kho của bạn\"},\"AudioTray\":{\"Connecting\":\"Đang kết nối STOW…\",\"LiveLabel\":\"Đang nói chuyện\"},\"LiveStatus\":{\"Connecting\":\"Đang kết nối…\",\"Reconnecting\":\"Đang kết nối lại…\",\"Paused\":\"Tạm dừng\",\"LiveCamera\":\"Đang phát · Camera\",\"LiveAudio\":\"Đang phát · Thoại\",\"Disconnected\":\"Đã ngắt kết nối\"},\"LiveView\":{\"Starting\":\"Đang khởi động phiên trực tiếp…\",\"AllowAccess\":\"Vui lòng cho phép truy cập camera và mic nếu được hỏi.\",\"MicReminder\":\"Bật mic để nói chuyện\"},\"LiveError\":{\"TitlePermission\":\"Cần quyền camera và mic\",\"TitleNoDevices\":\"Không tìm thấy camera hoặc mic\",\"TitleGeneric\":\"Đã có lỗi xảy ra\",\"BodyPermission\":\"STOW cần quyền truy cập camera và mic để ước tính kích thước. Cho phép truy cập trong trình duyệt rồi thử lại nha.\",\"BodyNoDevices\":\"Không tìm thấy camera hoặc mic trên thiết bị này. Thử trình duyệt hoặc thiết bị khác nha.\",\"BodyGeneric\":\"Không khởi động được phiên trực tiếp. Thử lại sau ít phút.\",\"BackToChat\":\"Quay lại trò chuyện\",\"TryAgain\":\"Thử lại\"},\"FilePreview\":{\"Failed\":\"Lỗi\",\"Retry\":\"Thử lại\"}}},\"children\":[\"$L4\",\"$L5\"]}]}]}]}]]}],{\"children\":[\"chat\",\"$L6\",{\"children\":[[\"id\",\"38813b91-4643-4b27-9539-65f0748fd791\",\"oc\"],\"$L7\",{\"children\":[\"__PAGE__\",\"$L8\",{},null,false]},null,false]},null,false]},null,false],\"$L9\",false]],\"m\":\"$undefined\",\"G\":[\"$a\",[]],\"s\":false,\"S\":false}\n"])</script>
+    <script>self.__next_f.push([1, "4:[\"$\",\"$Lb\",null,{\"color\":\"var(--primary)\",\"initialPosition\":0.08,\"crawlSpeed\":200,\"height\":3,\"crawl\":true,\"showSpinner\":false,\"easing\":\"ease\",\"speed\":200,\"shadow\":\"0 0 10px var(--primary), 0 0 5px var(--primary-dark)\"}]\n5:[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"$Ld\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$Le\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"$Lf\",null,{}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]\n6:[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L10\",null,{\"Component\":\"$11\",\"slots\":{\"children\":[\"$\",\"$Ld\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$Le\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]},\"params\":{}}]]}]\n7:[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$Ld\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$Le\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]\n8:[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L12\",null,{}],null,[\"$\",\"$L13\",null,{\"children\":[\"$L14\",[\"$\",\"$L15\",null,{\"promise\":\"$@16\"}]]}]]}]\n9:[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$L17\",null,{\"children\":\"$L18\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]],[\"$\",\"$L19\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$1a\",null,{\"fallback\":null,\"children\":\"$L1b\"}]}]}]]}]\n18:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\"}],[\"$\",\"meta\",\"2\",{\"name\":\"theme-color\",\"content\":\"#000000\"}]]\n14:null\n16:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"MyStorage Personal Assistant\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"conten"])</script>
+    <script>self.__next_f.push([1, "t\":\"An AI-powered personal assistant to help you make your storage easier.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"robots\",\"content\":\"index, follow\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"256x256\"}],[\"$\",\"$L1c\",\"4\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n1b:\"$16:metadata\"\n"])</script>
+    <textarea tabindex="-1" aria-hidden="true"
+        style="min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; display: block !important; border-width: 0px; box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans Fallback&quot;; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; line-height: 21px; padding: 6px 4px; tab-size: 4; text-indent: 0px; text-rendering: auto; text-transform: none; width: 649.6px; word-break: normal; word-spacing: 0px; scrollbar-gutter: auto;"></textarea><next-route-announcer
+        style="position: absolute;"><template shadowrootmode="open">
+            <div aria-live="assertive" id="__next-route-announcer__" role="alert"
+                style="position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;">
+            </div>
+        </template></next-route-announcer>
+</body>
