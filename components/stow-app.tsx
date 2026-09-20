@@ -14,8 +14,12 @@ import { calculateKnownSubtotal, demoQuote, formatVnd } from "@/lib/quote";
 import { conversationReducer, initialConversationState } from "@/lib/reducer";
 import type { CustomerInfo, Locale } from "@/lib/types";
 
-type StowAppProps = { simulateSubmitError: boolean };
 type FieldErrors = Partial<Record<keyof CustomerInfo, "required" | "email">>;
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+function assetPath(path: string) {
+  return `${basePath}${path}`;
+}
 
 export const demoCustomer: CustomerInfo = {
   name: "Nguyễn Văn An (demo)",
@@ -25,7 +29,7 @@ export const demoCustomer: CustomerInfo = {
   preferredContact: "email",
 };
 
-export function StowApp({ simulateSubmitError }: StowAppProps) {
+export function StowApp() {
   const [locale, setLocale] = useState<Locale>("vi");
   const [state, dispatch] = useReducer(conversationReducer, initialConversationState);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -120,6 +124,8 @@ export function StowApp({ simulateSubmitError }: StowAppProps) {
 
     dispatch({ type: "SUBMIT" });
     timerRef.current = setTimeout(() => {
+      const simulateSubmitError =
+        new URLSearchParams(window.location.search).get("submit") === "error";
       dispatch({ type: simulateSubmitError ? "FAIL" : "SUCCESS" });
     }, 700);
   }
@@ -167,7 +173,7 @@ export function StowApp({ simulateSubmitError }: StowAppProps) {
           <MenuIcon />
         </button>
         <div className="brand-lockup" aria-label="STOW by MyStorage">
-          <Image src="/brand/stow-cube.svg" alt="" width={30} height={30} priority />
+          <Image src={assetPath("/brand/stow-cube.svg")} alt="" width={30} height={30} priority />
           <strong>STOW</strong>
           <span>BY MYSTORAGE</span>
         </div>
@@ -179,7 +185,7 @@ export function StowApp({ simulateSubmitError }: StowAppProps) {
         >
           <Image
             className="language-flag"
-            src={locale === "vi" ? "/flags/vn.svg" : "/flags/gb.svg"}
+            src={assetPath(locale === "vi" ? "/flags/vn.svg" : "/flags/gb.svg")}
             alt=""
             width={24}
             height={18}
@@ -203,7 +209,7 @@ export function StowApp({ simulateSubmitError }: StowAppProps) {
         >
           {state.messages.length === 0 ? (
             <section className="welcome" aria-labelledby="welcome-title">
-              <Image src="/brand/stow-cube.svg" alt="STOW" width={112} height={112} priority />
+              <Image src={assetPath("/brand/stow-cube.svg")} alt="STOW" width={112} height={112} priority />
               <h1 id="welcome-title">{t.welcome.title}</h1>
               <p>{t.welcome.intro}</p>
               <div className="starter-grid">
@@ -306,7 +312,7 @@ export function StowApp({ simulateSubmitError }: StowAppProps) {
           <aside className="drawer" role="dialog" aria-modal="true" aria-label="STOW menu">
             <div className="drawer-header">
               <div className="brand-lockup compact">
-                <Image src="/brand/stow-cube.svg" alt="" width={28} height={28} />
+                <Image src={assetPath("/brand/stow-cube.svg")} alt="" width={28} height={28} />
                 <strong>STOW</strong>
               </div>
               <button

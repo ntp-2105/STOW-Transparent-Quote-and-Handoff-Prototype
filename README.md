@@ -30,3 +30,9 @@ npm run test:e2e
 The audited prices are demonstration data from the captured session. Pending distance and excluded return-delivery charges are deliberately not counted as zero or presented as a final payable total.
 
 The original standalone experiment is preserved at `reference/initial-quote-prototype.html`. `SPEC.md` and `stow.mystorage.vn.har` remain unchanged as evidence.
+
+## Deploy to GitHub Pages
+
+The workflow in `.github/workflows/deploy-pages.yml` validates the app, creates a static export in `out/`, and deploys it to GitHub Pages on every push to `main`. It can also be run manually from the Actions tab.
+
+In the GitHub repository, open **Settings → Pages** and set **Source** to **GitHub Actions**. The build reads the Pages base path automatically, so both project sites (for example, `/repository-name`) and root user sites work without editing the app.
